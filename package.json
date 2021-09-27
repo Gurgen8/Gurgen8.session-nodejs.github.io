@@ -1,0 +1,29 @@
+{
+  "name": "file-manager",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon -r esm -r dotenv/config ./bin/www",
+    "prod": "node -r esm -r dotenv/config ./bin/www dotenv_config_path=.env.prodaction"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "~4.16.1",
+    "express-mysql-session": "^2.1.7",
+    "express-session": "^1.17.2",
+    "http-errors": "~1.6.3",
+    "joi": "^17.4.2",
+    "lodash": "^4.17.21",
+    "md5": "^2.3.0",
+    "morgan": "~1.9.1",
+    "validator": "^13.6.0",
+    "validatorjs": "^3.22.1"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25",
+    "nodemon": "^2.0.12"
+  }
+}

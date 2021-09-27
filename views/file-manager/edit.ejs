@@ -1,0 +1,9 @@
+<%- include('../header') %>
+<form action="/file/edit" method="post">
+    <input type="hidden" name="file" value="<%= file %>">
+    <textarea name="content"><%= content %></textarea>
+    <br>
+    <button>save</button>
+</form>
+
+<%- include('../footer') %>

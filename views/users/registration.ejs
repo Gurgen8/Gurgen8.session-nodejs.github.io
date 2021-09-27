@@ -1,0 +1,27 @@
+<%- include('../header') %>
+
+<form action="/users/registration" method="post">
+    <input type="text" name="fName" value="<%= data.fName %>" placeholder="First Name">
+    <span class="error">
+        <%= errors.fName ? errors.fName[0] : null %>
+    </span>
+    <br>
+    <input type="text" name="lName" value="<%= data.lName %>" placeholder="Last Name">
+    <span class="error">
+        <%= errors.lName ? errors.lName[0] : null %>
+    </span>
+    <br>
+    <input type="email" name="email" value="<%= data.email %>" placeholder="Email">
+    <span class="error">
+       <%= errors.email ? errors.email[0] : null %>
+    </span>
+    <br>
+    <input type="password" name="password" value="<%= data.password %>" placeholder="Password">
+    <span class="error">
+       <%= errors.password ? errors.password[0] : null %>
+    </span>
+    <br>
+    <button>Register</button>
+</form>
+
+<%- include('../footer') %>

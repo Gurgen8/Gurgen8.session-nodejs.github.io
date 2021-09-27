@@ -1,0 +1,29 @@
+<%- include('../header') %>
+<a href="/file?dir=<%= backFolder %>">
+    back
+</a>
+<ul>
+
+    <% for (const file of files) { %>
+        <li>
+            <% if(file.isDirectory) { %>
+                <a href="/file?dir=<%= file.path %>">
+                    <img src="/images/folder.svg" width="25" height="25" alt="">
+                    <%= file.name %>
+
+                </a>
+
+            <% } else { %>
+                <a href="/file/edit?file=<%= file.path %>">
+                    <img src="/images/file.svg" width="25" height="25" alt="">
+                    <%= file.name %>
+                </a>
+            <% } %>
+                <form method="post" action="/file/delete">
+                    <button>delete</button>
+                    <input type="hidden" name="deleteFile" value="<%= file.path %>">
+                </form>
+        </li>
+    <% } %>
+</ul>
+<%- include('../footer') %>
